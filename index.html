@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="calculator">
+      <input id="display" readonly />
+      <div id="keys">
+        <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+        <button onclick="appendToDisplay('sin(', 'Math.sin((Math.PI/180)*')">
+          sin
+        </button>
+        <button onclick="appendToDisplay('sin⁻¹(', '(180/Math.PI)*Math.asin(')">
+          sin⁻¹
+        </button>
+
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+
+        <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+        <button onclick="appendToDisplay('cos(', 'Math.cos((Math.PI/180)*')">
+          cos
+        </button>
+        <button onclick="appendToDisplay('cos⁻¹(', '(180/Math.PI)*Math.acos(')">
+          cos⁻¹
+        </button>
+
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('X','*')" class="operator-btn">
+          X
+        </button>
+        <button onclick="appendToDisplay('tan(', 'Math.tan((Math.PI/180)*')">
+          tan
+        </button>
+        <button onclick="appendToDisplay('tan⁻¹(', '(180/Math.PI)*Math.atan(')">
+          tan⁻¹
+        </button>
+
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('/', '/') " class="operator-btn">
+          /
+        </button>
+        <button onclick="appendToDisplay('π', 'Math.PI')">π</button>
+
+        <button onclick="appendToDisplay('^2', '**2')">x²</button>
+        <button onclick="appendToDisplay('.')">.</button>
+
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="calculate()">=</button>
+
+        <button onclick="appendToDisplay(')', ')')">)</button>
+
+        <button onclick="appendToDisplay('(', '(')">(</button>
+
+        <button onclick="appendToDisplay('√(', 'Math.sqrt(')">√</button>
+        <button onclick="appendToDisplay('%', '/100')">%</button>
+        <button onclick="deleteLast()">Del</button>
+        <button onclick="clearDisplay()" class="del">AC</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

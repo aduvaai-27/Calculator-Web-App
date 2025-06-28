@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(43, 37, 37);
+}
+#calculator {
+  font-family: Arial, sans-serif;
+
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  max-width: 500rem;
+  overflow: hidden;
+}
+
+#display {
+  width: 100%;
+  padding: 20px;
+  font-size: 5rem;
+  text-align: left;
+  border: none;
+  background-color: rgb(173, 182, 189);
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+button {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 50%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 60%);
+}
+
+.operator-btn {
+  background-color: hsl(27, 75%, 49%);
+}
+
+.operator-btn:hover {
+  background-color: hsl(27, 75%, 60%);
+}
+
+.operator-btn:active {
+  background-color: hsl(27, 75%, 70%);
+}
+
+.del {
+  background-color: hsl(0, 89%, 22%);
+  width: 100px;
+  border-radius: 50%;
+}
+
+.del:hover {
+  background-color: hsl(0, 89%, 32%);
+}
+
+.del:active {
+  background-color: hsl(0, 89%, 42%);
+}
+
+@media screen and (max-width: 500px) {
+  button,
+  .del {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+
+  #display {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  #key {
+    gap: 5px;
+  }
+}
